@@ -1,16 +1,31 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import ProductList from './components/ProductList';
-import Footer from './components/Footer';
 
-const App = () => {
+import Home from "./pages/home/Home";
+import { useState } from "react";
+import Recycle from "./pages/recycle/Recycle";
+
+
+function App() {
+  const [path, setPath] = useState(window.location.pathname);
+
+  const handlePathChange = () => {
+    setPath(window.location.pathname);
+  }
+
+  window.addEventListener("popstate", handlePathChange);
+
+  let content;
+  if (path === "/") {
+    content = <Home />;
+  } else if(path==="/recycle"){
+    content = <Recycle />
+  }
+
+
   return (
-    <div className="App">
-      <Navbar />
-      <ProductList />
-      <Footer />
-    </div>
+    <>
+      {content}
+    </>
   );
-};
+}
 
 export default App;

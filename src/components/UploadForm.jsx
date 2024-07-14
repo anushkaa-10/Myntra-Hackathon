@@ -11,13 +11,7 @@ const UploadForm = () => {
         setUploadClicked(true);
       };
 
-    // const handleUpload = (event) => {
-    //     event.preventDefault(); 
-    //     setUploadClicked(true);
-    //     setTimeout(() => {
-    //       setItemAdded(true);
-    //     }, 1000); 
-    //   };
+ 
 
 
   return (
@@ -27,7 +21,7 @@ const UploadForm = () => {
         <input type="file" name="clothesImage"/>
         <button type='submit'> {uploadClicked ? 'Uploaded Successfully' : 'Upload'}</button>
       </form>
-      {uploadClicked && <p>Upload button clicked!</p>}
+     
       
     </section>
   );

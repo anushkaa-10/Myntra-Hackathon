@@ -1,10 +1,9 @@
 import React from 'react';
 import './soldItems.css'; 
 import { useEffect, useState } from 'react';
-import pic1 from '../assets/images/pic1.png';
-import pic2 from '../assets/images/pic2.png';
+
 const initialProducts = [
-  { id: 1, name: 'White Top', price: 'SOLD - $50', image: pic2, status: 'sold' },
+  { id: 1, name: 'White Top', price: 'SOLD - $50', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKKOpWooqxrap4RbvQb7zenywQYo76uUkCQ&s', status: 'sold' },
   { id: 2, name: 'Maroon Colour Dress', price: 'NOT SOLD YET', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKKOpWooqxrap4RbvQb7zenywQYo76uUkCQ&s', status: 'not-sold' },
 
 ];
@@ -13,7 +12,7 @@ const newProduct = {
     id: 3,
     name: 'Blue Dress',
     price: 'NOT SOLD YET',
-    image: pic1,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKKOpWooqxrap4RbvQb7zenywQYo76uUkCQ&s',
     status: 'not-sold'
   };
 

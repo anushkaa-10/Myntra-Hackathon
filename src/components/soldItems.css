@@ -1,0 +1,95 @@
+/* SoldItems.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.sold-items {
+  background-color: #f8f8f8;
+  padding: 40px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.sold-items h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.item-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.item-details {
+  margin-top: 10px;
+}
+
+.item-details h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.2em;
+  color: #555;
+  font-weight: 500;
+}
+
+.item-details p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.item-details p.sold {
+  color: green;
+}
+
+.item-details p.not-sold {
+  color: red;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

@@ -1,8 +1,8 @@
 
 import Home from "./pages/home/Home";
 import { useState } from "react";
-import Recycle from "./pages/recycle/Recycle";
-
+import Buy from "./pages/buy/Buy";
+import Sell from "./pages/sell/Sell";
 
 function App() {
   const [path, setPath] = useState(window.location.pathname);
@@ -16,8 +16,10 @@ function App() {
   let content;
   if (path === "/") {
     content = <Home />;
-  } else if(path==="/recycle"){
-    content = <Recycle />
+  } else if(path==="/buy"){
+    content = <Buy />
+  }else if(path==="/sell"){
+    content = <Sell />
   }
 
 

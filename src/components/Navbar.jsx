@@ -48,8 +48,8 @@ const Navbar = () => {
           {showDropdown && (
             <div class="absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-10">
               <ul>
-                  <li><a href="/recycle" class="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Buy</a> </li>
-                  <li><a href="/recycle" class="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Sell</a></li>
+                  <li><a href="/buy" class="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Buy</a> </li>
+                  <li><a href="/sell" class="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Sell</a></li>
               </ul>
           </div>
           )}

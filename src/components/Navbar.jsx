@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+  const [showDropdown, setShowDropdown] = useState(false)
+
+  const toogleDropdown = () =>{
+    setShowDropdown(!showDropdown)
+  }
   return (
     <nav className="bg-white shadow-md p-4 fixed w-full top-0 z-50">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
@@ -28,14 +35,24 @@ const Navbar = () => {
           />
         </div>
         <div className="flex items-center space-x-4">
-          <div className="cursor-pointer flex flex-col items-center">
+          <div className="cursor-pointer flex flex-col items-center" onClick={toogleDropdown}>
+       
             <img 
               src="https://cdn.iconscout.com/icon/premium/png-256-thumb/recycled-clothing-4349796-3604500.png?f=webp&w=256" 
               alt="Recycle Icon" 
               className="h-8"
             />
             <span>Recycle</span>
+         
           </div>
+          {showDropdown && (
+            <div class="absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-10">
+              <ul>
+                  <li><a href="/buy" class="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Buy</a> </li>
+                  <li><a href="/sell" class="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Sell</a></li>
+              </ul>
+          </div>
+          )}
           <div className="cursor-pointer flex flex-col items-center">
             <img 
               src="https://www.svgrepo.com/show/43426/profile.svg" 

@@ -5,14 +5,14 @@ const questions = [
   {
     id: 1,
     type: 'text',
-    question: 'Which decade popularized the mini skirt?',
+    question: '1. Which decade popularized the mini skirt?',
     options: ['1960s', '1970s', '1980s', '1950s'],
     answer: '1960s'
   },
   {
     id: 2,
     type: 'image',
-    question: 'Identify the logo:',
+    question: '2. Identify the logo:',
     image: 'https://w7.pngwing.com/pngs/466/162/png-transparent-lv-louis-vuitton-logo.png',
     options: ['Louis Vuitton', 'Versace', 'Dior', 'Gucci'],
     answer: 'Louis Vuitton'
@@ -20,28 +20,28 @@ const questions = [
   {
     id: 3,
     type: 'text',
-    question: 'Which designer introduced the concept of ready-to-wear fashion?',
+    question: '3. Which designer introduced the concept of ready-to-wear fashion?',
     options: ['Giorgio Armani', 'Jean-Paul Gaultier', 'Pierre Cardin', 'Yves Saint Laurent'],
     answer: 'Pierre Cardin'
   },
   {
     id: 4,
     type: 'text',
-    question: 'Which decade popularized the mini skirt?',
+    question: '4. Which decade popularized the mini skirt?',
     options: ['1960s', '1970s', '1980s', '1950s'],
     answer: '1960s'
   },
   {
     id: 5,
     type: 'text',
-    question: 'Which decade popularized the mini skirt?',
+    question: '5. Which decade popularized the mini skirt?',
     options: ['1960s', '1970s', '1980s', '1950s'],
     answer: '1960s'
   },
   {
     id: 6,
     type: 'image',
-    question: 'Identify the logo:',
+    question: '6. Identify the logo:',
     image: 'https://w7.pngwing.com/pngs/466/162/png-transparent-lv-louis-vuitton-logo.png',
     options: ['Louis Vuitton', 'Versace', 'Dior', 'Gucci'],
     answer: 'Louis Vuitton'
@@ -49,21 +49,21 @@ const questions = [
   {
     id: 7,
     type: 'text',
-    question: 'Which designer introduced the concept of ready-to-wear fashion?',
+    question: '7. Which designer introduced the concept of ready-to-wear fashion?',
     options: ['Giorgio Armani', 'Jean-Paul Gaultier', 'Pierre Cardin', 'Yves Saint Laurent'],
     answer: 'Pierre Cardin'
   },
   {
     id: 8,
     type: 'text',
-    question: 'Which designer introduced the concept of ready-to-wear fashion?',
+    question: '8. Which designer introduced the concept of ready-to-wear fashion?',
     options: ['Giorgio Armani', 'Jean-Paul Gaultier', 'Pierre Cardin', 'Yves Saint Laurent'],
     answer: 'Pierre Cardin'
   },
   {
     id: 9,
     type: 'image',
-    question: 'Identify the logo:',
+    question: '9. Identify the logo:',
     image: 'https://w7.pngwing.com/pngs/466/162/png-transparent-lv-louis-vuitton-logo.png',
     options: ['Louis Vuitton', 'Versace', 'Dior', 'Gucci'],
     answer: 'Louis Vuitton'
@@ -71,7 +71,7 @@ const questions = [
   {
     id: 10,
     type: 'text',
-    question: 'Which designer introduced the concept of ready-to-wear fashion?',
+    question: '10. Which designer introduced the concept of ready-to-wear fashion?',
     options: ['Giorgio Armani', 'Jean-Paul Gaultier', 'Pierre Cardin', 'Yves Saint Laurent'],
     answer: 'Pierre Cardin'
   },

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
 
-  const [showDropdown, setShowDropdown] = useState(false)
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
-  const toogleDropdown = () =>{
-    setShowDropdown(!showDropdown)
-  }
   return (
     <nav className="bg-white shadow-md p-4 fixed w-full top-0 z-50">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
@@ -20,11 +19,11 @@ const Navbar = () => {
             />
           </div>
           <ul className="hidden md:flex space-x-4">
-            <li className="cursor-pointer">Home</li>
-            <li className="cursor-pointer">Men</li>
-            <li className="cursor-pointer">Women</li>
-            <li className="cursor-pointer">Kids</li>
-            <li className="cursor-pointer">Beauty</li>
+            <li className="cursor-pointer"><a href="/">Home</a></li>
+            <li className="cursor-pointer"><a href="/men">Men</a></li>
+            <li className="cursor-pointer"><a href="/women">Women</a></li>
+            <li className="cursor-pointer"><a href="/kids">Kids</a></li>
+            <li className="cursor-pointer"><a href="/beauty">Beauty</a></li>
           </ul>
         </div>
         <div className="flex-1 mx-4">
@@ -35,23 +34,31 @@ const Navbar = () => {
           />
         </div>
         <div className="flex items-center space-x-4">
-          <div className="cursor-pointer flex flex-col items-center" onClick={toogleDropdown}>
-       
+          <div className="cursor-pointer flex flex-col items-center">
+            <a href="/quizzes">
+              <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKTe7PPWuLsJqM-dbeIrHgnm8gD1nIyjg0fA&s" 
+                alt="Quizzes Icon" 
+                className="h-8"
+              />
+              <span>Quizzes</span>
+            </a>
+          </div>
+          <div className="cursor-pointer flex flex-col items-center" onClick={toggleDropdown}>
             <img 
               src="https://cdn.iconscout.com/icon/premium/png-256-thumb/recycled-clothing-4349796-3604500.png?f=webp&w=256" 
               alt="Recycle Icon" 
               className="h-8"
             />
             <span>Recycle</span>
-         
           </div>
           {showDropdown && (
-            <div class="absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-10">
+            <div className="absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-10">
               <ul>
-                  <li><a href="/buy" class="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Buy</a> </li>
-                  <li><a href="/sell" class="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Sell</a></li>
+                <li><a href="/buy" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Buy</a></li>
+                <li><a href="/sell" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-black transition-colors duration-300">Sell</a></li>
               </ul>
-          </div>
+            </div>
           )}
           <div className="cursor-pointer flex flex-col items-center">
             <img 
@@ -81,11 +88,11 @@ const Navbar = () => {
       </div>
       <div className="md:hidden flex justify-center mt-2">
         <ul className="flex space-x-4">
-          <li className="cursor-pointer">Home</li>
-          <li className="cursor-pointer">Men</li>
-          <li className="cursor-pointer">Women</li>
-          <li className="cursor-pointer">Kids</li>
-          <li className="cursor-pointer">Beauty</li>
+          <li className="cursor-pointer"><a href="/">Home</a></li>
+          <li className="cursor-pointer"><a href="/men">Men</a></li>
+          <li className="cursor-pointer"><a href="/women">Women</a></li>
+          <li className="cursor-pointer"><a href="/kids">Kids</a></li>
+          <li className="cursor-pointer"><a href="/beauty">Beauty</a></li>
         </ul>
       </div>
     </nav>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from "../../components/Navbar";
 import './buy.css'; // Import custom CSS file for Buy component
 
 const products = [
@@ -84,25 +85,28 @@ const Buy = () => {
   };
 
   return (
-    <div className="container">
-      <h2 className="section-title">Pre-Owned Store</h2>
-      <div className="product-grid">
-        {products.map(product => (
-          <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.name} className="product-image" />
-            <div className="product-details">
-              <h3 className="product-name">{product.name}</h3>
-              <p className="product-price">{product.price}</p>
-              <p className="product-info"><span className="info-label">Clothes Name:</span> {product.clothesName}</p>
-              <p className="product-info"><span className="info-label">Age of Clothes:</span> {product.ageOfClothes}</p>
-              <p className="product-info"><span className="info-label">Brand Name:</span> {product.brandName}</p>
-              <p className="product-info"><span className="info-label">Usage Intensity:</span> {product.usageIntensity}</p>
-              <p className="product-info"><span className="info-label">Category:</span> {product.category}</p>
-              <p className="product-description">{product.description}</p>
-              <button onClick={() => handleBuy(product.name)} className="buy-button">Buy Now</button>
+    <div>
+      <Navbar />
+      <div className="container">
+        <h2 className="section-title">Pre-Owned Store</h2>
+        <div className="product-grid">
+          {products.map(product => (
+            <div key={product.id} className="product-card">
+              <img src={product.image} alt={product.name} className="product-image" />
+              <div className="product-details">
+                <h3 className="product-name">{product.name}</h3>
+                <p className="product-price">{product.price}</p>
+                <p className="product-info"><span className="info-label">Clothes Name:</span> {product.clothesName}</p>
+                <p className="product-info"><span className="info-label">Age of Clothes:</span> {product.ageOfClothes}</p>
+                <p className="product-info"><span className="info-label">Brand Name:</span> {product.brandName}</p>
+                <p className="product-info"><span className="info-label">Usage Intensity:</span> {product.usageIntensity}</p>
+                <p className="product-info"><span className="info-label">Category:</span> {product.category}</p>
+                <p className="product-description">{product.description}</p>
+                <button onClick={() => handleBuy(product.name)} className="buy-button">Buy Now</button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

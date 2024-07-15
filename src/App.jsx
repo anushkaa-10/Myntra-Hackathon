@@ -1,33 +1,41 @@
 
+import React, { useState } from "react";
 import Home from "./pages/home/Home";
-import { useState } from "react";
 import Buy from "./pages/buy/Buy";
 import Sell from "./pages/sell/Sell";
+import Quiz from "./components/Quizzes";
 
 function App() {
   const [path, setPath] = useState(window.location.pathname);
 
   const handlePathChange = () => {
     setPath(window.location.pathname);
-  }
+  };
 
   window.addEventListener("popstate", handlePathChange);
 
   let content;
-  if (path === "/") {
-    content = <Home />;
-  } else if(path==="/buy"){
-    content = <Buy />
-  }else if(path==="/sell"){
-    content = <Sell />
+
+  switch (path) {
+    case "/":
+      content = <Home />;
+      break;
+    case "/buy":
+      content = <Buy />;
+      break;
+    case "/sell":
+      content = <Sell />;
+      break;
+    case "/quizzes": // Add path for quizzes
+      content = <Quiz />;
+      break;
+    default:
+      content = <Home />; // Default to Home page for unknown paths
+      break;
   }
 
-
-  return (
-    <>
-      {content}
-    </>
-  );
+  return <>{content}</>;
 }
 
 export default App;
+

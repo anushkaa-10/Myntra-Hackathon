@@ -16,7 +16,7 @@ const clothesRoutes = require('./routes/clothes');
 const productRoutes = require('./routes/products'); 
 
 app.use('/api/clothes', clothesRoutes);
-app.use('/api/products', productRoutes); /
+app.use('/api/products', productRoutes); 
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
